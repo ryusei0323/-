@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-  before_action :ensure_correct_user, only: [:edit, :update]
+#ここに移動
   before_action :authenticate_user!
+  before_action :ensure_correct_user, only: [:edit, :update]
+#ここにあったbefore_action :authenticate_user!を移動
 
   def show
     @user = User.find(params[:id])
