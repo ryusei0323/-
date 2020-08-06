@@ -1,0 +1,5 @@
+<%= form_for(current_user.following_relationships.find_by(following_id: @user.id), html: { method: :delete }) do |f| %>
+  <div class="row">
+    <%= f.submit "フォロー外す", class: "btn btn-large follow-btn col-xs-12" %>
+  </div>
+<% end %>
